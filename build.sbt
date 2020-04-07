@@ -27,3 +27,12 @@ lazy val root = project.in(file("."))
   .aggregate(calculators)
 
 lazy val calculators = project
+    .dependsOn(api)
+    .settings(
+      libraryDependencies ++= Dependencies.calculatorDependencies
+    )
+
+lazy val api = project
+    .settings(
+      libraryDependencies ++= Dependencies.apiDependencies
+    )
