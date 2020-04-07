@@ -21,3 +21,9 @@ randomInt :=  {
   println(emotion.value)
   scala.util.Random.nextInt
 }
+
+
+lazy val root = project.in(file("."))
+  .aggregate(calculators)
+
+lazy val calculators = project
