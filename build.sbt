@@ -2,10 +2,13 @@ import com.typesafe.sbt.packager.docker.ExecCmd
 
 name := "scala"
 
-version := "0.1"
-
 scalaVersion := "2.13.1"
 
+ThisBuild / version := "1.0"
+ThisBuild / licenses ++= Seq(("MIT", url("http://opensource.org/licenses/MIT")))
+
+publish/skip := true
+bintrayVcsUrl := Some("git@github.com:waqarys/scala.git")
 
 //custom setting key
 lazy val emotion = settingKey[String]("How are you feeling")
@@ -46,3 +49,8 @@ lazy val api = project
     .settings(
       libraryDependencies ++= Dependencies.apiDependencies
     )
+
+resolvers += Resolver.JCenterRepository
+lazy val test = project.settings(
+  libraryDependencies += ("calculators" % "calculators_2.12" % "1.0")
+)
