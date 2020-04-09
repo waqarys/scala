@@ -51,6 +51,8 @@ lazy val api = project
     )
 
 resolvers += Resolver.JCenterRepository
+/*
 lazy val test = project.settings(
-  libraryDependencies += ("calculators" % "calculators_2.12" % "1.0")
+  libraryDependencies += ("calculators" % "calculators_2.13.1" % "1.0")
 )
+*/
