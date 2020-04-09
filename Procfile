@@ -1,1 +1,1 @@
-web: api/target/universal/stage/bin/web-server
+web: api/target/scala-2.12/classes/WebServer
