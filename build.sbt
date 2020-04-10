@@ -4,6 +4,8 @@ name := "scala"
 
 scalaVersion := "2.13.1"
 
+//mainClass in Compile := Some("WebServer")
+
 ThisBuild / version := "1.0"
 ThisBuild / licenses ++= Seq(("MIT", url("http://opensource.org/licenses/MIT")))
 
@@ -28,8 +30,10 @@ randomInt :=  {
 }
 
 
+/*
 lazy val root = project.in(file("."))
   .aggregate(calculators)
+*/
 
 lazy val calculators = project
     .dependsOn(api)
@@ -50,7 +54,7 @@ lazy val api = project
       libraryDependencies ++= Dependencies.apiDependencies
     )
 
-resolvers += Resolver.JCenterRepository
+//resolvers += Resolver.JCenterRepository
 /*
 lazy val test = project.settings(
   libraryDependencies += ("calculators" % "calculators_2.13.1" % "1.0")
