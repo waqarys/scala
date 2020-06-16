@@ -54,6 +54,13 @@ lazy val api = project
       libraryDependencies ++= Dependencies.apiDependencies
     )
 
+lazy val typeSystem = project
+  .enablePlugins(JavaAppPackaging)
+  .enablePlugins(DockerPlugin)
+  .settings(
+    libraryDependencies ++= Dependencies.commonDependencies
+  )
+
 //resolvers += Resolver.JCenterRepository
 /*
 lazy val test = project.settings(
