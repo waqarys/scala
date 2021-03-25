@@ -15,4 +15,9 @@ object Dependencies {
     scalaXml, json4s, akkaHttp, akkaStream) ++ commonDependencies
 
   val calculatorDependencies: Seq[ModuleID] = commonDependencies
+
+  val catsVersion = "1.4.0"
+  val catsDependencies: Seq[ModuleID] = Seq(
+   "org.typelevel" %% "cats-core" % catsVersion
+  )
 }
